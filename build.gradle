@@ -1,0 +1,13 @@
+subprojects {
+    apply plugin: 'groovy'
+    group = 'org.codeadvent'
+    version = '1.0'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        compile 'org.codehaus.groovy:groovy-all:2.3.11'
+
+        testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
+    }
+}
