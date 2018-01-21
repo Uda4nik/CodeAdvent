@@ -7,7 +7,7 @@ class Task4 {
 
     static int generate(String input, Predicate<String> condition) {
         int number = 0
-        while (!condition.test(getHexBinary(input + number))) {
+        while (condition.negate().test(getHexBinary(input + number))) {
             number++
         }
         return number
