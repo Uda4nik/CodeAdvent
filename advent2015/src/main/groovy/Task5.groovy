@@ -90,10 +90,6 @@ class Task5 {
         private String[] getPositions(LinkedHashMap<String, String> previousPairsMap, String pair) {
             previousPairsMap.get(pair).split("=")
         }
-
-        private String createPositionsString(int letterPosition) {
-            "" + letterPosition + "=" + (letterPosition + 1)
-        }
     }
 
     static class RepeatedLetterWithOneLetterBetween implements Predicate<String> {
