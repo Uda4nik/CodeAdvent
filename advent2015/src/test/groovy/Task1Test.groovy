@@ -10,10 +10,18 @@ class Task1Test extends Specification {
         cut.moveSanta("") == 0
     }
 
-    def "Santa can move"() {
+    def "Santa can move up and down"() {
         expect:
         cut.moveSanta("(") == 1
         cut.moveSanta(")") == -1
+    }
+
+    def "exception is thown on illigal move"() {
+        when:
+        cut.moveSanta("x")
+
+        then:
+        thrown(Task1.UnknowMoveException)
     }
 
     def "Santa can move twice"() {
