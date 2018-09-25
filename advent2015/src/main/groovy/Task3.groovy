@@ -10,7 +10,7 @@ class Task3 {
     static void processDirections(String input) {
         input.getChars()
                 .collect { singleChar -> MoveEvent.of(singleChar) }
-                .forEach { event -> eventBus.processEvent(event) }
+                .forEach { event -> eventBus.publishEvent(event) }
     }
 
     static class EventBus {
@@ -20,7 +20,7 @@ class Task3 {
             subscribers << listener
         }
 
-        void processEvent(MoveEvent event) {
+        void publishEvent(MoveEvent event) {
             subscribers.forEach { it -> it.consume(event) }
         }
     }

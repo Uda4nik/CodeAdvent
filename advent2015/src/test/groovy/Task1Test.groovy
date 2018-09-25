@@ -30,7 +30,7 @@ class Task1Test extends Specification {
         cut.moveSanta("))") == -2
     }
 
-    def "Santa can move in different dirrections"() {
+    def "Santa can move in different directions"() {
         expect:
         cut.moveSanta("()") == 0
         cut.moveSanta(")()(") == 0

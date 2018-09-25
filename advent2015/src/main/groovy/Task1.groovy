@@ -22,10 +22,8 @@ class Task1 {
     }
 
     private int decodeMove(char givenMove) {
-        if (givenMove == '(')
-            return 1
-        if (givenMove == ')')
-            return -1
+        if (givenMove == '(')  return 1
+        if (givenMove == ')')  return -1
         throw new UnknowMoveException()
     }
 
