@@ -28,6 +28,11 @@ class Task7 {
             }
 
         }
+
+        void overrideSignal(String wire, int newValue) {
+            wires.put(wire, new ValueSignal(newValue))
+            cache = [:]
+        }
     }
 
     static class LineParser {

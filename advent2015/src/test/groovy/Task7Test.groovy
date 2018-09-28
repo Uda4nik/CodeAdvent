@@ -39,4 +39,19 @@ class Task7Test extends Specification {
         then:
         result == 3176
     }
+
+    def 'integration test 2'() {
+        given:
+        String input = getClass().getResourceAsStream("Task7.text").text
+        WireNet cut = WireNet.from(input)
+
+        and:
+        cut.overrideSignal("b", cut.getSignalOn("a"))
+
+        when:
+        int result = cut.getSignalOn("a")
+
+        then:
+        result == 14710
+    }
 }
