@@ -8,5 +8,6 @@ subprojects {
     dependencies {
         compile 'org.codehaus.groovy:groovy-all:2.3.11'
         testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
+        testCompile group: 'net.bytebuddy', name: 'byte-buddy', version: '1.10.1'
     }
 }
